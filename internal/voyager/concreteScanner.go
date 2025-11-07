@@ -54,7 +54,7 @@ func (self *Concretevoyager) proceed(index int) {
 			log.Fatal(err)
 		}
 		objectID, err := strconv.Atoi(container[2])
-		self.geoJson.AddPoint([]float64{coordinateX, coordinateY}, objectID, container[3], container[4], container[5], container[6])
+		self.geoJson.AddPoint([]float64{coordinateY, coordinateX}, objectID, container[3], container[4], container[5], container[6])
 	}
 	self.geoJson.Create()
 	self.geoJson.Clear()
